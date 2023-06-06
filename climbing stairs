@@ -1,0 +1,14 @@
+class Solution
+{
+    int[] climb = new int[46];
+    
+    public int climbStairs(int n)
+    {
+        if(n <= 2)
+            return n;
+        else if(climb[n] != 0)
+            return climb[n];
+        else
+            return climb[n] = climbStairs(n - 1) + climbStairs(n - 2);
+    }
+}
